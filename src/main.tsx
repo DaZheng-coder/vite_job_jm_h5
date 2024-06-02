@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { Loading } from "antd-mobile";
+import "virtual:svg-icons-register";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

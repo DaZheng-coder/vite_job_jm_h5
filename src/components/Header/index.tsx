@@ -9,7 +9,7 @@ const Header: FC<IHeader> = ({ title }) => {
   const back = () => history.back();
 
   return (
-    <NavBar onBack={back} className="fixed top-0 left-0 w-full bg-white">
+    <NavBar onBack={back} className="fixed top-0 left-0 w-full bg-white z-[999]">
       {title}
     </NavBar>
   );

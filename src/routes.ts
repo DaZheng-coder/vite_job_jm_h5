@@ -7,7 +7,7 @@ export interface IRoute {
 
 const routes: IRoute[] = [
   {
-    path: "/shareEmployInfo/index",
+    path: "/shareEmployInfo/*",
     component: lazy(() => import("./modules/ShareEmployInfo")),
   },
   {
@@ -15,27 +15,21 @@ const routes: IRoute[] = [
     component: lazy(() => import("./modules/ShareEmployInfo/pages/Login")),
   },
   {
-    path: "/shareEmployInfo/employInfoDetail",
+    path: "/shareEmployInfo/editEmployInfo",
     component: lazy(
-      () => import("./modules/ShareEmployInfo/pages/EmployInfoDetail")
-    ),
-  },
-  {
-    path: "/shareEmployInfo/employInfoList",
-    component: lazy(
-      () => import("./modules/ShareEmployInfo/pages/EmployInfoList")
-    ),
-  },
-  {
-    path: "/shareEmployInfo/enterpriseCenter",
-    component: lazy(
-      () => import("./modules/ShareEmployInfo/pages/EnterpriseCenter")
+      () => import("./modules/ShareEmployInfo/pages/EditEmployInfo")
     ),
   },
   {
     path: "/shareEmployInfo/myEmployInfo",
     component: lazy(
       () => import("./modules/ShareEmployInfo/pages/MyEmployInfo")
+    ),
+  },
+  {
+    path: "/shareEmployInfo/employInfoDetail",
+    component: lazy(
+      () => import("./modules/ShareEmployInfo/pages/EmployInfoDetail")
     ),
   },
 ];
