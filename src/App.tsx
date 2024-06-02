@@ -2,13 +2,19 @@ import "./App.css";
 import "./utils/rem.js";
 import "./tailwind.css";
 import "./antdTheme.css";
-import { Route, Router, Routes } from "react-router-dom";
-import ShareEmployInfo from "./modules/ShareEmployInfo/index.js";
+import { Route, Routes } from "react-router-dom";
+import routes from "./routes.js";
 
 function App() {
   return (
     <Routes>
-      <Route path="/shareEmployInfo/index" Component={ShareEmployInfo}></Route>
+      {routes.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          Component={route.component}
+        ></Route>
+      ))}
     </Routes>
   );
 }

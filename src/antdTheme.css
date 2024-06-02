@@ -14,4 +14,9 @@
   --adm-color-background: #ffffff;
 
   --adm-font-size-main: var(--adm-font-size-5);
+
+  --height: 96px;
+}
+
+#share_employ_info {
 }
