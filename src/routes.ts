@@ -32,6 +32,10 @@ const routes: IRoute[] = [
       () => import("./modules/ShareEmployInfo/pages/EmployInfoDetail")
     ),
   },
+  {
+    path: "/jobStation/*",
+    component: lazy(() => import("./modules/JobStation")),
+  },
 ];
 
 export default routes;
