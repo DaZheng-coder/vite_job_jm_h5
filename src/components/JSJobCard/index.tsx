@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const JSJobCard: FC = () => {
   return (
-    <div className="bg-white rounded-[20px] p-[28px] my-[28px] shadow-custom-shadow">
+    <div className="bg-white rounded-[20px] p-[28px] my-[28px] shadow-custom-js-card-5">
       <div className="text-[30px] flex justify-between">
         <span>职位名称</span>
         <span className="text-[#2a57c9]">工钱</span>

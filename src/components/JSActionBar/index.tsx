@@ -5,9 +5,15 @@ export interface IJSActionBar {
   className?: string;
   onNext?: () => void;
   nextText?: string;
+  cancelText?: string;
 }
 
-const JSActionBar: FC<IJSActionBar> = ({ className, onNext, nextText }) => {
+const JSActionBar: FC<IJSActionBar> = ({
+  className,
+  onNext,
+  nextText,
+  cancelText,
+}) => {
   return (
     <div
       className={`flex justify-center fixed w-full bottom-0 left-0 min-h-[192px] bg-white shadow-custom-js-shadow py-[28px] ${className}`}
@@ -17,7 +23,7 @@ const JSActionBar: FC<IJSActionBar> = ({ className, onNext, nextText }) => {
         color="primary"
         onClick={onNext}
       >
-        重置
+        {cancelText || "重置"}
       </Button>
       <Button
         className="!h-[88px] w-[638px] !bg-[#2A57C9] !border-[#2A57C9] hover:border-[#2A57C9] !mx-[28px]"

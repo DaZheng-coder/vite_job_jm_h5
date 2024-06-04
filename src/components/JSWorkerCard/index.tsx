@@ -7,7 +7,7 @@ const JSWorkerCard: FC = () => {
     <div className="bg-white rounded-[20px] p-[28px] my-[28px] shadow-custom-shadow">
       <div className="flex items-center">
         <img
-          className="w-[128px] h-[128px] border-dashed border-[4px] border-[#999]"
+          className="w-[128px] h-[128px]"
           src={ManAvatar}
           alt=""
         />
