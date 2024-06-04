@@ -5,7 +5,9 @@ export default {
     extend: {
       boxShadow: {
         "custom-shadow": "0px 8px 20px 0px rgba(255,160,28,0.05)",
-        "custom-bottom-bar-shadow": "0px -8 8px 0px rgba(255,160,28,0.05)"
+        "custom-bottom-bar-shadow": "0px -8 8px 0px rgba(255,160,28,0.05)",
+        "custom-js-card": "0px 0 40px 0px rgba(9,109,217,0.03)",
+        "custom-js-shadow": "0px -8 8px 0px rgba(42,87,201,0.05)",
         // 你还可以添加其他阴影效果...
       },
       backgroundImage: (theme) => ({

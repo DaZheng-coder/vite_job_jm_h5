@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const SearchPage: FC = () => {
-  return <div>SearchPage</div>
-}
+  return <div></div>;
+};
 
-export default SearchPage
+export default SearchPage;
