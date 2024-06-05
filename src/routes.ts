@@ -58,6 +58,12 @@ const routes: IRoute[] = [
       () => import("./modules/JobStation/pages/CreateJobSeekingInfo")
     ),
   },
+  {
+    path: "/jobStation/createRecruitmentInfo",
+    component: lazy(
+      () => import("./modules/JobStation/pages/CreateRecruitmentInfo")
+    ),
+  },
 ];
 
 export default routes;

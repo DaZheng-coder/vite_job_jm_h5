@@ -1,5 +1,6 @@
 import { Button } from "antd-mobile";
 import { FC } from "react";
+import './index.less'
 
 export interface IBottomActionBar {
   className?: string;
@@ -17,7 +18,7 @@ const BottomActionBar: FC<IBottomActionBar> = ({
       className={`flex justify-center fixed w-full bottom-0 left-0 min-h-[192px] bg-white shadow-custom-bottom-bar-shadow py-[28px] ${className}`}
     >
       <Button
-        className="!h-[88px] w-[638px] hover:border-[#FFA01C]"
+        className="se_button !h-[88px]  w-[638px] hover:border-[#FFA01C]"
         shape="rounded"
         color="primary"
         onClick={onNext}

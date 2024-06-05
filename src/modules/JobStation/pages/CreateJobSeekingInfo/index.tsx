@@ -27,7 +27,8 @@ import { useJobStation } from "@/store";
 import JobStation from "../..";
 import MInputPicker from "@/components/MInputPicker";
 import SvgIcon from "@/components/SvgIcon";
-import WorkerCard from "@/components/WorkerCard";
+import WorkerCard from "@/components/JSUserCard";
+import JSUserCard from "@/components/JSUserCard";
 
 const CreateJobSeekingInfo: FC = () => {
   const [step, setStep] = useState<string>("0");
@@ -220,7 +221,7 @@ const CreateJobSeekingInfo: FC = () => {
   return (
     <div className="pt-[90px] pb-[196px] bg-[#f7f8fc] h-full overflow-scroll">
       <Header title="新建信息" />
-      <div className="bg-[white] h-[170px] mb-[-40px]">
+      <div className="bg-[white] h-[170px] mb-[-40px]  pt-[28px]">
         <Steps current={Number(step)}>
           <Step title="实名认证" />
           <Step title="求职" />
@@ -238,7 +239,9 @@ const CreateJobSeekingInfo: FC = () => {
             </span>
           </div>
           <div className="text-[26px] text-[#999] pt-[28px]">
-            <CheckShieldOutline />
+            <div className="text-[28px]">
+              <CheckShieldOutline />
+            </div>
             <span className="pl-[16px]">
               信息安全保护中，认证信息将用于创建信息等功能，与账号唯一绑定，未经您允许不对外提供
             </span>
@@ -257,7 +260,9 @@ const CreateJobSeekingInfo: FC = () => {
           {renderStep2()}
         </Tabs.Tab>
         <Tabs.Tab title="" key={"3"}>
-          <WorkerCard />
+          <JSUserCard />
+          {renderStep1()}
+          {renderStep2()}
         </Tabs.Tab>
       </Tabs>
       <Popup

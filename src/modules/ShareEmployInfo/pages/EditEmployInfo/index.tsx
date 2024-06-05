@@ -1,6 +1,6 @@
 import MCard from "@/components/MCard";
 import PageContainer from "@/components/PageContainer";
-import { Form } from "antd-mobile";
+import { Form, Toast } from "antd-mobile";
 import { FC, useState } from "react";
 import { EFields } from "../../filedsMap";
 import MInput from "@/components/MInput";
@@ -10,13 +10,24 @@ import "./index.less";
 import MInputPicker from "@/components/MInputPicker";
 import MDatePicker from "@/components/MDatePicker";
 import BottomActionBar from "@/components/BottomActionBar";
+import { saveSharePersonInfo } from "@/apis";
 
 const EditEmployInfo: FC = () => {
   const { employInfo } = useShareEmployStore();
 
   const [form] = Form.useForm();
 
-  const handleSubmit = () => {};
+  const handleSubmit = async () => {
+    try {
+      await form.validateFields();
+    } catch (error) {
+      if (error?.errorFields?.length > 0) {
+        Toast.show("请填写完整信息");
+      }
+      return;
+    }
+    const res = await saveSharePersonInfo(form.getFieldsValue());
+  };
 
   return (
     <PageContainer

@@ -17,7 +17,7 @@ const JSActionBar: FC<IJSActionBar> = ({
 }) => {
   return (
     <div
-      className={`flex justify-center fixed w-full bottom-0 left-0 min-h-[192px] bg-white shadow-custom-js-shadow py-[28px] ${className}`}
+      className={`flex justify-center z-[999] fixed w-full bottom-0 left-0 min-h-[192px] bg-white shadow-custom-js-shadow py-[28px] ${className}`}
     >
       {!!cancelText && (
         <Button
