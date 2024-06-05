@@ -14,6 +14,32 @@ interface IStore {
   updateEmployInfo: (next: Partial<IEmployInfo>) => void;
 }
 
+interface IJobInfo {
+  belongStation: string;
+  jobType: string;
+  salary: string;
+  settlement: string;
+  position: string;
+  serviceDesc: string;
+}
+
+interface IJobStationStore {
+  token: string;
+  jobInfo: IJobInfo;
+  updateJobInfo: (next: Partial<IEmployInfo>) => void;
+}
+
+export const useJobStation = create<IJobStationStore>((set, get) => {
+  return {
+    token: "",
+    jobInfo: {},
+    updateJobInfo: (next: Partial<IEmployInfo>) =>
+      set((state) => {
+        return { jobInfo: { ...state.jobInfo, ...next } };
+      }),
+  };
+});
+
 export const useShareEmployStore = create<IStore>((set, get) => {
   return {
     token: "",

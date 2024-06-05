@@ -3,6 +3,7 @@ import { FC } from "react";
 import IWantJob from "@assets/js_i_want_job.png";
 import IWantWorker from "@assets/js_i_want_worker.png";
 import Selected from "@assets/js_selected.png";
+import JSActionBar from "@/components/JSActionBar";
 
 const ChooseIdentity: FC = () => {
   return (
@@ -34,6 +35,7 @@ const ChooseIdentity: FC = () => {
           )}
         </div>
       </div>
+      <JSActionBar nextText="下一步" />
     </div>
   );
 };
