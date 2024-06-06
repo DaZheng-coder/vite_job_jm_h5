@@ -1,9 +1,28 @@
 import { Dropdown, Radio, SearchBar } from "antd-mobile";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import "./index.less";
 import EmployCardItem from "@/components/EmployCardItem";
+import { getShareEmployInfoList } from "@/apis";
 
 const EmployInfoList: FC = () => {
+  const [page, setPage] = useState<number>(0);
+  const [pageSize, setPageSize] = useState<number>(10);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  const init = async () => {
+    const res = await getShareEmployInfoList({
+      page,
+      pageSize,
+    });
+    setData(res?.data?.resultData?.data?.data?.pageBean);
+  };
+
+  console.log("*** data", data);
+
   return (
     <div className="bg-[#f5f5f5] h-full">
       <div className="fixed w-full bg-white">
@@ -39,9 +58,11 @@ const EmployInfoList: FC = () => {
       </div>
       <div className="pt-[206px] px-[28px]">
         <div className="text-[28px] font-medium py-[30px]">
-          共 <span className="text-[#ffa01c]">2345</span> 条信息
+          共 <span className="text-[#ffa01c]">{data?.total || 0}</span> 条信息
         </div>
-        <EmployCardItem />
+        {data.list.map((item) => (
+          <EmployCardItem {...item} />
+        ))}
       </div>
     </div>
   );

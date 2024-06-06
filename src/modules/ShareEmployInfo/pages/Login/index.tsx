@@ -26,7 +26,11 @@ const Login: FC = () => {
                 </Form.Item>
                 <Form.Item
                   name="password"
-                  extra={<span className="text-[#28px] text-[#ffa01c]"></span>}
+                  extra={
+                    <span className="text-[#28px] text-[#ffa01c]">
+                      发送验证码
+                    </span>
+                  }
                 >
                   <Input
                     placeholder="请输入手机验证码"

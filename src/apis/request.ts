@@ -13,20 +13,21 @@ axios.interceptors.request.use((config) => {
   return config;
 });
 
-axios.interceptors.response.use((res) => {
-  console.log("*** res", res);
-  const { code, errMsg } = res;
-  if (code === -1) {
-    // todo 清空token和用户信息
-  } else if (code !== 0) {
-    console.log("*** errMsg", errMsg);
-    Toast.show({
-      icon: "fail",
-      content: errMsg || "网络异常",
-      duration: 2000,
-    });
-  }
-});
+// axios.interceptors.response.use((res) => {
+//   // console.log("*** res", res);
+//   // const { code, errMsg } = res;
+//   // console.log("*** res.code", res.code);
+//   // if (code === -1) {
+//   //   // todo 清空token和用户信息
+//   // } else if (code !== "1") {
+//   //   console.log("*** errMsg", errMsg);
+//   //   Toast.show({
+//   //     icon: "fail",
+//   //     content: errMsg || "网络异常",
+//   //     duration: 2000,
+//   //   });
+//   // }
+// });
 
 const request = axios;
 

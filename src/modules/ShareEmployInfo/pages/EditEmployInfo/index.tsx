@@ -4,7 +4,7 @@ import { Form, Toast } from "antd-mobile";
 import { FC, useState } from "react";
 import { EFields } from "../../filedsMap";
 import MInput from "@/components/MInput";
-import { educationBgs } from "@/constants";
+import { educationBgs, resignationReasons } from "@/constants";
 import { useShareEmployStore } from "@/store";
 import "./index.less";
 import MInputPicker from "@/components/MInputPicker";
@@ -98,12 +98,12 @@ const EditEmployInfo: FC = () => {
             inputProps={{ placeholder: "请输入" }}
           />
           <MDatePicker name={EFields.resignationTime} label="离职时间" />
-          <MInput
-            formProps={{
-              label: "离职原因",
-              name: EFields.resignationReason,
-            }}
-            inputProps={{ placeholder: "请输入" }}
+          <MInputPicker
+            name={EFields.resignationReason}
+            label="离职原因"
+            form={form}
+            columns={[resignationReasons]}
+            getValue={(v) => v[0]}
           />
         </MCard>
       </Form>

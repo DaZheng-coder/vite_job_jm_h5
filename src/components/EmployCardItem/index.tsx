@@ -13,13 +13,13 @@ const EmployCardItem: FC<{
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log("*** 1324")
+    console.log("*** 1324");
     navigate("/shareEmployInfo/employInfoDetail");
   };
 
   return (
     <div
-      className="p-[28px] bg-white rounded-[20px] shadow-custom-shadow"
+      className="p-[28px] my-[28px] bg-white rounded-[20px] shadow-custom-shadow"
       onClick={handleClick}
     >
       <div className="flex justify-between text-[32px] font-bold">

@@ -46,3 +46,14 @@ export const educationBgs: PickerColumnItem[] = [
   { key: "90", value: "90", label: "其他" },
 ];
 
+export const resignationReasons: PickerColumnItem[] = [
+  { key: "01", value: "01", label: "工作强度原因" },
+  { key: "02", value: "02", label: "薪资原因" },
+  { key: "03", value: "03", label: "生产/生活环境因素" },
+  { key: "04", value: "04", label: "产城融合度不高(配套设备不全等)" },
+  { key: "05", value: "05", label: "人员和岗位不匹配" },
+  { key: "06", value: "06", label: "想求职其他岗位" },
+  { key: "07", value: "07", label: "身体原因" },
+  { key: "08", value: "08", label: "家庭原因" },
+  { key: "09", value: "09", label: "其他原因" },
+];
